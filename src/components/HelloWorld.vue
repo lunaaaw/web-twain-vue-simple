@@ -31,7 +31,7 @@ export default {
          */
         Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
         Dynamsoft.WebTwainEnv.ProductKey =
-            "t0103MQEAALyvxagocbKSRSxrTPT6WwNbLyDO0TkwmLhh9qgt7i83hCgiyplVqCkU5RqQlGZ3JZdI6oMCVamATX997VZBS2eBz8gy8pjqM41fffgnKycgDmva/SyVm/n0qaao5DQBJEk9Fw==";
+            "t00891wAAAKTG4H2T7Owd0u13J2J13YlIWb/3ZZYcloL3QLiMmPE7VeMxgON4a3qr/Z9oQhZkquHh6L/fKvj7L553wGi+67gP/PnFSJk7KBPkN+BEsWzBH1ojK28=";
         Dynamsoft.WebTwainEnv.Containers = [{
             WebTwainId: "dwtObject",
             ContainerId: this.containerId,
