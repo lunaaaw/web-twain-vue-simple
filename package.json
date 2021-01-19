@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "ncp node_modules/dwt/dist public/dwt-resources && vue-cli-service serve",
-    "build": "vue-cli-service build&& ncp node_modules/dwt/dist build/dwt-resources",
+    "build": "vue-cli-service build&& ncp node_modules/dwt/dist dist/dwt-resources",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
