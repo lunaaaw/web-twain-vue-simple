@@ -31,7 +31,7 @@ export default {
          */
         Dynamsoft.DWT.ResourcesPath = "dwt-resources";
         Dynamsoft.DWT.ProductKey =
-            "t00891wAAAJyHArHjdRL0wBNHC47fVCY41/FatXNtYRsY6D/2tMOnqU3ecIoRTzEw1WNKa7lZJEgzA3fD39lzbscdtF5Wtxa/Cwnz3QLUgU8QaQCj65BTN2rtK7Q=";
+            "t00891wAAABbdLEJATW3/5y5Z9zPHbvN0BoZRljs0AswZsu9Athx99uwWOdwzNYI2VwhYWZut2jfa3p+5RVLaTxvM3OPKwwcuBOa7BeQO0gQ1DWCGJVMMN2gAK5g=";
         Dynamsoft.DWT.Containers = [{
             WebTwainId: "dwtObject",
             ContainerId: this.containerId,
@@ -51,7 +51,7 @@ export default {
         Dynamsoft_OnReady() {
             this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
             if (this.bWASM) {
-                this.DWObject.MouseShape = true;
+                this.DWObject.Viewer.cursor = "pointer";
             } else {
                 let sources = this.DWObject.GetSourceNames();
                 this.selectSources = document.getElementById("sources");
