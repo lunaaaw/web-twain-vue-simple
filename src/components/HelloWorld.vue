@@ -24,14 +24,13 @@ export default {
         };
     },
     mounted() {
-        this.bWASM =
-            Dynamsoft.Lib.env.bMobile || !Dynamsoft.DWT.UseLocalService;
+        this.bWASM = false;
         /**
          * ResourcesPath & ProductKey must be set in order to use the library!
          */
         Dynamsoft.DWT.ResourcesPath = "dwt-resources";
         Dynamsoft.DWT.ProductKey =
-            "t00891wAAABbdLEJATW3/5y5Z9zPHbvN0BoZRljs0AswZsu9Athx99uwWOdwzNYI2VwhYWZut2jfa3p+5RVLaTxvM3OPKwwcuBOa7BeQO0gQ1DWCGJVMMN2gAK5g=";
+            "t00901wAAAFWG3iQa7V439k0DgGpmB6s4Rmz1VHLwubjWRQAlDUX/af1K0niJCExdUWQFZNehlPh9L86TLIUXzz+xH7JoS8HK3wbFereBMoAt4GkCEd9CVjTTIyyt";
         Dynamsoft.DWT.Containers = [{
             WebTwainId: "dwtObject",
             ContainerId: this.containerId,
@@ -50,6 +49,7 @@ export default {
          */
         Dynamsoft_OnReady() {
             this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+			this.bWASM = Dynamsoft.Lib.env.bMobile || !Dynamsoft.DWT.UseLocalService;
             if (this.bWASM) {
                 this.DWObject.Viewer.cursor = "pointer";
             } else {
